@@ -34,7 +34,7 @@ module.exports = {
     {
       modelNumber:'Boeing 747',
       capacity:240,
-      createdAt: new Date(),
+      createdAt:  new Date(),
       updatedAt: new Date()
     },
     {
