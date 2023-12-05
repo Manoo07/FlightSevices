@@ -10,9 +10,9 @@ router.get('/city',CityController.getAll);
 router.patch('/city/:id',CityController.update);
 
 router.post('/airport',AirportController.create);
-router.delete('airport/:id',AirportController.destroy);
-router.get('airport/:id',AirportController.get);
-router.get('airport',AirportController.getAll);
-router.patch('airport/:id',AirportController.update);
+router.delete('/airport/:id',AirportController.destroy);
+router.get('/airport/:id',AirportController.get);
+router.get('/airport',AirportController.getAll);
+router.patch('/airport/:id',AirportController.update);
 
 module.exports = router;
