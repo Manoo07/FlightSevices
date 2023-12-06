@@ -1,4 +1,4 @@
-const { fileURLToPath } = require('url');
+
 const { FlightService } = require('../services/index');
 
 const flightService = new FlightService();
@@ -6,7 +6,16 @@ const flightService = new FlightService();
 const create = async (req,res) => {
     try{
         // console.log(req.body);
-        const flight = await flightService.createFlight(req.body);
+        const reqData = {
+            flightNumber:req.body.flightNumber ,
+            airplaneId: req.body.airplaneId,
+            departureAirportId: req.body.departureAirportId ,
+            arrivalAirportId: req.body.arrivalAirportId ,
+            arrivalTime: req.body.arrivalTime ,
+            departureTime: req.body.departureTime ,
+            price: req.body.price 
+        }
+        const flight = await flightService.createFlight(reqData);
         return res.status(201).json({
             data: flight,
             success: true,
